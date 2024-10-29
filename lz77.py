@@ -27,7 +27,7 @@ def lz77_compress(input_string, window_size=10, lookahead_buffer_size=5):
         if match_length > 0:
             next_char = input_string[i + match_length] if i + match_length < len(input_string) else ""
             compressed_data.append((match_distance, match_length, next_char))
-            i += match_length + 1  # Move past the matched sequence and next char
+            i += match_length + 1  
         else:
     
             compressed_data.append((0, 0, input_string[i]))
